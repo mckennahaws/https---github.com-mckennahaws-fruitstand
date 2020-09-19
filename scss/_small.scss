@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    display: grid;
+    grid-template-columns: 5rem auto;
+    max-width: 71.25rem;
+    color: $fontColor;
+}
+header h1 {margin: 0; margin-top: .5rem; font-family: 'Ranchers', cursive;}
+header h2 {margin: 0; font-weight: normal; font-family: 'Ranchers', cursive;}
+i{
+    font-size: 4rem;
+    text-decoration: none;
+    margin-top: .5rem;
+}
+
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: $menuColor;
+    max-width: 71.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color:darken($menuColor, 10%);
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color:lighten($menuColor, 20%);
+    color: #333;
+}
+nav ul li.active a {
+    background-color: darken($menuColor, 20%);
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+    max-width: 71.25rem;
+}
+main h1{color: $fontColor; font-family: 'Ranchers', cursive;}
+main h2{font-family: 'Roboto', sans-serif;}
+div.fruitstand{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.fruitstand figure{
+    flex-basis: 46%;
+    margin: 1rem 2%;
+}
+div.fruitstand figure img{
+    width: 100%
+}
+div.fruitstand figure figcaption{font-family: 'Roboto', sans-serif;}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $menuColor;
+    padding: .5rem 2%;
+    text-align: center;
+    max-width: 71.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
